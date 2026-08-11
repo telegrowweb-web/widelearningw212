@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wide Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: #f0f4ff;
+      color: #111;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 0 0 0;
+    }
+
+    /* ── TOP HEADER ── */
+    .top-header {
+      background: linear-gradient(135deg, #003fad, #0062ff, #3399ff);
+      padding: 10px 20px 6px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,80,255,0.35);
+    }
+
+    .top-header .site-name {
+      font-size: clamp(13px, 3vw, 17px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* ── MAIN BANNER ── */
+    .name-banner {
+      background: linear-gradient(135deg, #003fad, #0062ff, #3399ff);
+      padding: 22px 20px 18px;
+      text-align: center;
+    }
+
+    .name-banner h1 {
+      color: #ffffff;
+      font-size: clamp(36px, 11vw, 80px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .name-banner .tagline {
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-top: 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      padding: 0 20px 20px;
+    }
+
+    .timer {
+      font-size: 17px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #ff6600;
+    }
+
+    /* ── PROFILE / LOGO ── */
+    .profile-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 22px auto 10px;
+    }
+
+    .profile {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #0062ff;
+      box-shadow: 0 0 24px rgba(0, 100, 255, 0.4);
+      display: block;
+    }
+
+    .logo-name-bar {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #003fad, #0062ff);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0,100,255,0.4);
+    }
+
+    h2 {
+      color: #0055dd;
+      margin-top: 30px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    p { font-size: 15px; margin: 8px 0; }
+
+    /* ── REGISTER BUTTON ── */
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 40px;
+      background: linear-gradient(45deg, #003fad, #0077ff);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s;
+      margin-top: 16px;
+      box-shadow: 0 5px 18px rgba(0, 100, 255, 0.45);
+    }
+
+    .register-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 100, 255, 0.6);
+    }
+
+    .register-btn svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+
+    .footer { font-size: 13px; margin-top: 16px; opacity: 0.75; }
+
+    .credit { text-align: center; font-size: 13px; margin-top: 12px; opacity: 0.75; color: #555; }
+    .credit a { color: #0055dd; text-decoration: none; font-weight: 600; }
+
+    .disclaimer {
+      background: #e8eeff;
+      color: #555;
+      font-size: 12px;
+      padding: 10px 14px 8px;
+      border-top: 1px solid #ccd6ff;
+      margin-top: 16px;
+      line-height: 1.5;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .footer-links {
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 0 12px;
+      background: #e8eeff;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .footer-links a { color: #0055dd; text-decoration: none; }
+    .footer-links span { color: #0055dd; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top site label -->
+  <div class="top-header">
+    <div class="site-name">⭐ Official Platform ⭐</div>
+  </div>
+
+  <!-- Main name banner -->
+  <div class="name-banner">
+    <h1>Wide Learning</h1>
+    <div class="tagline">📈 Learn Strategies · Trade Smart 💡</div>
+  </div>
+
+  <main>
+    <div class="timer">
+      Redirecting in <span id="countdown">10</span> seconds...
+    </div>
+
+    <!-- Profile logo -->
+    <div class="profile-wrap">
+      <div class="profile">
+        <img src="https://i.ibb.co/gM3PKcqT/Chat-GPT-Image-Aug-11-2026-05-03-54-PM.png" alt="Wide Learning Logo" />
+        <div class="logo-name-bar">Wide 99</div>
+      </div>
+    </div>
+
+    <h2>Thousands of Subscribers Joined</h2>
+    <p>✅ Learning live opportunities every day</p>
+
+    <a href="https://wide99.com/register" class="register-btn" id="joinBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      REGISTER NOW
+    </a>
+
+    <p class="footer">💎 Precision. Power. Passion 🌍 — Join Now</p>
+  </main>
+
+  <div class="credit">
+    Ads Managed by <a href="https://telegram.me/+TRlJl628l-WE9">@Nexgroww_agency</a>
+  </div>
+
+  <section class="disclaimer">
+    <strong>Disclaimer:</strong> All trading and game-related activities involve risk.
+    Provides information for educational and entertainment purposes only.
+    No guaranteed profits. Trade responsibly.
+  </section>
+
+  <div class="footer-links">
+    <a href="https://wa.link/googleleds">Privacy Policy</a>
+    <span>|</span>
+    <a href="https://wa.link/googleleds">Contact Us</a>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  //  let countdown = 10;
+  //  const joinBtn = document.getElementById("joinBtn");
+    const countdownEl = document.getElementById("countdown");
+    if (!joinBtn) return;
+    const redirectUrl = joinBtn.href;
+    if (countdownEl) countdownEl.innerText = countdown;
+    const timer = setInterval(function () {
+      countdown--;
+      if (countdownEl) countdownEl.innerText = countdown;
+      if (countdown <= 0) { clearInterval(timer); window.location.href = redirectUrl; }
+    }, 1000);
+  });
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1541639564067647');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1541639564067647&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+</body>
+</html>
