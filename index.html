@@ -237,20 +237,20 @@
   </div>
 
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let countdown = 10;
-    const joinBtn = document.getElementById("joinBtn");
+  //document.addEventListener("DOMContentLoaded", function () {
+   // let countdown = 10;
+  //  const joinBtn = document.getElementById("joinBtn");
     const countdownEl = document.getElementById("countdown");
     if (!joinBtn) return;
-    const redirectUrl = joinBtn.href;
+  //  const redirectUrl = joinBtn.href;
     if (countdownEl) countdownEl.innerText = countdown;
-    const timer = setInterval(function () {
+    //const timer = setInterval(function () {
       countdown--;
       if (countdownEl) countdownEl.innerText = countdown;
       if (countdown <= 0) { clearInterval(timer); window.location.href = redirectUrl; }
-    }, 1000);
+ //   }, 1000);
   });
-  </script>
+ // </script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -261,11 +261,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1099634505961914');
+fbq('init', '2783219948728550');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1099634505961914&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=2783219948728550&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </body>
